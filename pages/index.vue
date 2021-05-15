@@ -1,20 +1,20 @@
 <template lang="pug">
-  div
+  div.flex.flex-col.h-screen.bg-blue-bg
     Navbar
+    Card.flex-grow
 </template>
 
 <script>
 import Navbar from '~/components/Navbar'
+import Card from '~/components/Card'
 
 export default {
  components:{
-   Navbar
+   Navbar,
+   Card
  } 
 }
 </script>
 
 <style lang="sass">
-body
-  height: 100vh
-  @apply bg-blue-bg
 </style>
