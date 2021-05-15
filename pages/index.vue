@@ -1,4 +1,20 @@
 <template lang="pug">
   div
-    h1.text-4xl initial commit
+    Navbar
 </template>
+
+<script>
+import Navbar from '~/components/Navbar'
+
+export default {
+ components:{
+   Navbar
+ } 
+}
+</script>
+
+<style lang="sass">
+body
+  height: 100vh
+  @apply bg-blue-bg
+</style>
