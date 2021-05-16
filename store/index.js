@@ -52,6 +52,10 @@ export const mutations = {
         const index_in_arr =  state.list.find(x=>x.id===category_id).content.findIndex(x=>x.id === id); 
         state.list.find(x=>x.id===category_id).content[index_in_arr].title = text;
     },
+    changeCheck(state,{category_id, id, isChecked}){
+        const index_in_arr =  state.list.find(x=>x.id===category_id).content.findIndex(x=>x.id === id); 
+        state.list.find(x=>x.id===category_id).content[index_in_arr].isChecked = isChecked;
+    },
     addEmpty(state, {category_id, new_id}) {
         state.list.find(x => x.id === category_id).content.push(
             {

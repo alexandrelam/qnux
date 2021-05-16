@@ -1,6 +1,6 @@
 <template lang="pug">
   div(@mouseover="isHover=true" @mouseleave="isHover=false").flex.gap-4.items-center
-    input(type="checkbox" v-model="isChecked" @change="$emit('check', isChecked)")
+    input(type="checkbox" v-model="isChecked" @change="changeCheck({category_id: category_id, id: id, isChecked: isChecked})")
     input(type="text" v-model="textvalue" @change="changeText({category_id: category_id, id: id, text: textvalue})").focus_outline-none
     div(@click="remove({category_id, id})").h-5.w-5
       svg(v-show="isHover" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor")
@@ -25,7 +25,7 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["changeText", "remove"])
+    ...mapMutations(["changeText", "changeCheck", "remove"])
   }
 };
 </script>
