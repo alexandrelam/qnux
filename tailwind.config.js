@@ -5,9 +5,6 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      sans: ['Cabin', 'sans-serif'],
-    },
     colors:{
       blue:{
         DEFAULT: '#0B60B0',
