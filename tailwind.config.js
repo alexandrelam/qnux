@@ -8,7 +8,8 @@ module.exports = {
     colors:{
       blue:{
         DEFAULT: '#0B60B0',
-        bg: '#FCFCFC'
+        bg: '#FCFCFC',
+        link: '#3B82F6'
       },
       transparent: 'transparent',
       current: 'currentColor',

@@ -10,8 +10,14 @@
 <script>
 export default {
   props: {
-    isChecked: { Boolean, default: false },
-    textvalue: { String, default: "" }
+    isCheckedProp: { Boolean, default: false },
+    textvalueProp: { String, default: "" }
+  },
+  data() {
+    return {
+      isChecked: this.isCheckedProp,
+      textvalue: this.textvalueProp
+    };
   }
 };
 </script>
