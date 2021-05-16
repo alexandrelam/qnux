@@ -19,6 +19,7 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
+      green: colors.emerald
     },
     boxShadow: {
       DEFAULT: '0px 0px 4px 4px rgba(0, 0, 0, 0.05);',
