@@ -21,10 +21,8 @@ export default {
   methods: {
     ...mapMutations(["addEmpty"]),
     addProgram() {
-      console.log("id : " + this.id);
       const new_id = this.$store.getters.getLastCategoryItem(this.id) + 1;
       this.addEmpty({ category_id: this.id, new_id: new_id });
-      console.log("new id : " + new_id);
     }
   }
 };

@@ -42,7 +42,6 @@ export const state = () => ({
 
 export const getters = {
     getLastCategoryItem: (state) => (category_id) => {
-        console.log("category id : " + category_id)
         const content_arr = state.list.find(x => x.id === category_id).content
         return content_arr[content_arr.length - 1].id
     }
@@ -55,7 +54,6 @@ export const mutations = {
       })
     },
     addEmpty(state, {category_id, new_id}) {
-        console.log(category_id + " " + new_id)
         state.list.find(x => x.id === category_id).content.push(
             {
                 id: new_id,
