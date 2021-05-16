@@ -61,5 +61,8 @@ export const mutations = {
                 title: ""
             }
         )
+    },
+    remove(state, {category_id, obj_id}){
+        state.list.find(x=>x.id === category_id).content.splice(state.list.find(x=>x.id===category_id).content.findIndex(x=>x.id === obj_id), 1)
     }
   }
