@@ -48,8 +48,9 @@ export const getters = {
 }
 
 export const mutations = {
-    add(state, {category_id, id, text}) {
-        state.list.find(x=>x.id===category_id).content[id] = text;
+    changeText(state, {category_id, id, text}) {
+        const index_in_arr =  state.list.find(x=>x.id===category_id).content.findIndex(x=>x.id === id); 
+        state.list.find(x=>x.id===category_id).content[index_in_arr].title = text;
     },
     addEmpty(state, {category_id, new_id}) {
         state.list.find(x => x.id === category_id).content.push(
